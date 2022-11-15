@@ -85,43 +85,43 @@
                   <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarsExample04">
-                  <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                      <a class="nav-link" th:href="@{/}">Home</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" th:href="@{/about}">About</a>
-                    </li>
-
-                    <li class="nav-item">
-                      <a class="nav-link" th:href="@{/product}">Products</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" th:href="@{/contact}">Contact Us</a>
-                    </li>
-                    <li class="nav-item d_none">
-                      <a class="nav-link" href="#"
-                        ><i class="fa fa-search" aria-hidden="true"></i
-                      ></a>
-                    </li>
-                    <li class="nav-item d_none" th:if="${name} == null">
-                      <a class="nav-link" th:href="@{/login}">Login/Register</a>
+                               <ul class="navbar-nav mr-auto">
+                              <li class="nav-item ">
+                                 <a class="nav-link" th:href="@{/}">Home</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" th:href="@{/about}">About</a>
+                              </li>
+                             
+                              <li class="nav-item">
+                                 <a class="nav-link" th:href="@{/product}">Buy</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" th:href="@{/contact}">Contact Us</a>
+                              </li>
+                             
+                             <li class="nav-item d_none" th:if="${name} == null">
+                      <a class="nav-link" th:href="@{/login}"
+                        >Login/Register</a
+                      >
                     </li>
                     <li class="nav-item d_none active" th:if="${name} != null">
                       <a class="nav-link" th:href="@{/cart}"
+                        >Cart</a
+                      >
+                    </li>
+                     <li class="nav-item d_none" th:if="${name} != null">
+                      <a class="nav-link" 
                         >Hello, [[${name}]]</a
                       >
                     </li>
                     <li class="nav-item d_none" th:if="${name} != null">
                       <form action="#" th:action="@{/logout}" method="POST">
-                        <input
-                          type="submit"
-                          value="Log out"
-                          class="nav-link d_none opacity-0"
-                        />
+                        <input type="submit" value="Log out" class="nav-link d_none opacity-0"  />
                       </form>
+                     
                     </li>
-                  </ul>
+                           </ul>
                 </div>
               </nav>
             </div>
